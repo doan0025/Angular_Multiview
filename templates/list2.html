@@ -1,0 +1,20 @@
+ <div id="todoapp" ng-controller="ListTwoCtrl">
+        <h1>List 2</h1>
+ 
+<!--New Task-->
+            <form id="">
+                <input id="" type="text" name="add-task" placeholder="new task" ng-model="taskName" />
+                <input type="submit" value="add task" ng-click="addTask()"></input>    
+            </form>      
+            
+<!--Task list-->
+            <ul id="todo-list">
+                <li ng-repeat="task in taskList track by $index" >
+                    <span>{{task.name}}</span>
+                    <button title="Delete Task" ng-click="deleteTask(taskList.indexOf(task))">Remove</button>
+
+                </li>
+            </ul>
+            
+
+        </div>
